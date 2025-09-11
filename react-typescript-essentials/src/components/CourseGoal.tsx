@@ -2,7 +2,11 @@ import { type PropsWithChildren } from "react";
 
 // interface CourseGoalProps { title : string, children: ReactNode };
 
-type CourseGoalProps = PropsWithChildren<{ title : string }>;
+type CourseGoalProps =
+ PropsWithChildren<{
+     id: number;
+    title : string ;
+     onDelete: (id:number) => void}>;
 
 // const CourseGoal : FC<CourseGoalProps> = ({ title , children }) => {
 // return (
@@ -21,14 +25,14 @@ type CourseGoalProps = PropsWithChildren<{ title : string }>;
 
 
 
-export default function CourseGoal({title , children} :CourseGoalProps) {
+export default function CourseGoal({title , children , onDelete , id } :CourseGoalProps) {
     return(
         <article>
             <div>
                 <h2>{title}</h2>
                 {children}
             </div>
-            <button>Delate</button>
+            <button onClick={() => onDelete(id)}>Delate</button>
         </article>
     )
 }
