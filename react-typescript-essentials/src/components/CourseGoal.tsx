@@ -1,11 +1,16 @@
-export default function CourseGoal(props: {}) {
+interface CourseGoalProps
+ { title : string, description : string };
+
+export default function CourseGoal(
+    { title , description  } :CourseGoalProps )
+     {
     return (
        <article>
         <div>
-            <h2>TITLE</h2>
-            <p>DESCRIPTION</p>
+            <h2>{title}</h2>
+            <p>{description}</p>
         </div>
-    <button>Delate</button>
+       <button>Delate</button>
        </article>
     );
 };
