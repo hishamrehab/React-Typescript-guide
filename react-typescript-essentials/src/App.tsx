@@ -4,9 +4,9 @@ export default function App() {
   return (
      <main>
        <CourseGoal
-        title="Learn React + TS" 
-        description="Learn React + TS From the ground up"
-         />
+        title="Learn React + TS">
+        <p>Learn React + TS From the ground up</p>
+         </CourseGoal>
      </main>
   )
 };
