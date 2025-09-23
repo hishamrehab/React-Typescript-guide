@@ -6,9 +6,10 @@ type CourseGoalProps =
  PropsWithChildren<{
      id: number;
     title : string ;
-     onDelete: (id:number) => void}>;
+     onDelete: (id:number) => void}
+     >;
 
-// const CourseGoal : FC<CourseGoalProps> = ({ title , children }) => {
+    //  const CourseGoal : FC<CourseGoalProps> = ({ title , children }) => {
 // return (
 //       <article>
 //         <div>

@@ -15,7 +15,9 @@ type NewGoalProps = {
 
     const enteredGoal = goal.current!.value;
     const enterdSummary = summary.current!.value;
-    
+
+
+    event.currentTarget.reset();
     onAddGoal(enteredGoal , enterdSummary);
   }
 
