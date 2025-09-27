@@ -1,14 +1,14 @@
-import { type ReactNode, type ElementType, ComponentPropsWithoutRef } from "react"
+import { type ReactNode, type ElementType,
+     ComponentPropsWithoutRef } from "react"
 
 type ContainerProps<T extends ElementType> = {
     as ?:T;
     children: ReactNode,
-
-}& ComponentPropsWithoutRef<T>;
+} & ComponentPropsWithoutRef<T>;
 
 
 export default function Conatiner<C extends ElementType>(
     {as , children , ...props } : ContainerProps<C>) {
     const Component = as || 'div';
-    return <Component {...props}>{children}</Component>
+    return <Component className="container" {...props}>{children}</Component>
 }
