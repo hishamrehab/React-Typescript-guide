@@ -11,7 +11,7 @@ function Input( {label , id , ...props}, ref) {
     return (
     <p>
         <label htmlFor={id}>{label}</label>
-        <input id={id} {...props} ref={ref} />
+        <input id={id} name={id} {...props} ref={ref} />
     </p>
     )
 }
